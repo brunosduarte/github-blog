@@ -21,7 +21,7 @@ export function Profile() {
         </FullName>
         
         <BioDescription>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde aspernatur, enim provident libero expedita exercitationem odio esse veritatis cupiditate maiores magni sed accusamus neque, laudantium distinctio amet temporibus commodi assumenda.
+        Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.
         </BioDescription>
 
         <InfoArea>

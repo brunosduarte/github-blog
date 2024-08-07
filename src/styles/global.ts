@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-
 export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -18,10 +17,17 @@ export const GlobalStyle = createGlobalStyle`
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center top;
+    
+    //background-color: red;
+    display: flex;
+    flex-direction: column;
 
     background-color: ${props => props.theme['base-background']};
     color: ${props => props.theme['base-title']};
     -webkit-font-smoothing: antialiased;
+
+    margin-top: 120px;
+    padding: 40px;
   }
 
   body, input, textarea, button {

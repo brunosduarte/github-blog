@@ -6,14 +6,12 @@ import { Search } from "./components/Search";
 import { Repos } from "./components/Repos";
 
 export function App() {
- 
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
-      <Profile />
-      <Search />
-      <Repos />
-
+        <Profile />
+        <Search />
+        <Repos />
     </ThemeProvider>
 
   )

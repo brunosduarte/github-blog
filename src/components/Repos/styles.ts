@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const ReposContainer = styled.div`
-  margin-top: 10px;
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
+  margin-top: 20px;
+  //padding: 20px;
+  display: grid;
+  grid-area: myCards;
+  grid-template-areas: myCards myCards;
   gap: 10px;
-  //background-color: ${props => props.theme['red-500']};
+  background-color: ${props => props.theme['red-500']};
 `;
 
 export const CardContainer = styled.div`
@@ -14,6 +15,7 @@ export const CardContainer = styled.div`
   padding: 10px;
   display: flex;
   flex-direction: column;
+  flex-basis: 1;
   border-radius: 10px;
   background-color: ${props => props.theme['base-post']};
   border-color: ${props => props.theme['base-border']};
@@ -28,7 +30,8 @@ export const CardContainer = styled.div`
 
 export const CardTitleAndElapsed = styled.div`
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  //flex-direction: row;
   //padding: 20px;
   //background-color: ${props => props.theme['red-700']};
 `;
@@ -41,7 +44,8 @@ export const CardTitle = styled.h1`
 `;
 
 export const CardElapsed = styled.div`
-  width: 200px;
+  flex-shrink: 1;
+  flex-wrap: nowrap;
   //background-color: ${props => props.theme['red-300']};
 `;
 

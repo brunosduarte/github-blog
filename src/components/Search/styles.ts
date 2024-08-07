@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const SearchContainer = styled.div`
-  margin-top: 50px;
-  margin-left: 100px;
+  margin-top: 20px;
+  //margin-left: 100px;
   padding: 20px;
   
   display: flex;

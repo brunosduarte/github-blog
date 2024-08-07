@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const ProfileContainer = styled.div`
-  margin-top: 200px;
-  margin-left: 100px;
+  //margin-top: 200px;
+  //margin-left: 100px;
   padding: 20px;
-  width: calc(100vw - 20%);
+  //width: calc(100vw - 20%);
   
   display: grid;
   grid: 150px / auto auto auto;
