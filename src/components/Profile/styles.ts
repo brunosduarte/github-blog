@@ -37,6 +37,7 @@ export const FullName = styled.h1`
   display: flex;
   align-content: center;
   justify-content: space-between;
+  color: ${props => props.theme['base-title']};
 `;
 
 export const LinkToGithub = styled.button`
@@ -44,10 +45,11 @@ export const LinkToGithub = styled.button`
   justify-content: center;
   color: ${props => props.theme['blue']};
   background-color: transparent;
-  border: none;
+  border-style: solid;
+  border-color: transparent;
   
   &:hover {
-    border-bottom: 2px;
+    border: 0 2px 0 4px;
     border-color: blue;
     transition: background-color 0.2s;
     cursor: pointer;
@@ -58,6 +60,7 @@ export const BioDescription = styled.h2`
   //background-color: ${props => props.theme['red-300']};
   margin-top: 5px;
   font-size: 14px;
+  color: ${props => props.theme['base-text']};
 
 `;
 
@@ -68,7 +71,8 @@ export const InfoArea = styled.div`
   flex-direction: wrap;
   justify-content: left;
   gap: 30px;
-`;
+  color: ${props => props.theme['base-subtitle']};
+  `;
 
 export const GithubProfile = styled.div`
   display: flex;

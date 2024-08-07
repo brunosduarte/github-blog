@@ -23,12 +23,20 @@ export const TitleSearch = styled.div`
 `;
 
 export const InputSearch = styled.input`
+  padding: 8px;
   margin-top: 10px;
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-content: center;
-  border: 2px;
+  border: 1px;
+  border: solid;
   border-color: ${props => props.theme['base-border']};
   background-color: ${props => props.theme['base-input']};
+
+  &:hover {
+    border-color: ${props => props.theme['base-label']};
+    transition: border-color 0.2s;
+    
+  }
 `;

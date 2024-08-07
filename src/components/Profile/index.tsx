@@ -26,17 +26,17 @@ export function Profile() {
 
         <InfoArea>
           <GithubProfile>
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={faGithub} color='base-label' />
             brunosduarte
           </GithubProfile>
 
           <WorksOn>
-            <FontAwesomeIcon icon={faBuilding} />
+            <FontAwesomeIcon icon={faBuilding} color='base-label' />
             Engenhação
           </WorksOn>
 
           <Followers>
-            <FontAwesomeIcon icon={faUserGroup} />
+            <FontAwesomeIcon icon={faUserGroup} color='base-label' />
             33 followers
           </Followers>
         </InfoArea>

@@ -7,7 +7,7 @@ export function Search() {
         <p>Publicações</p>
         <p>9 publicações</p>
       </TitleSearch>
-      <InputSearch />
+      <InputSearch placeholder="Search content"/>
     </SearchContainer>
   )
 }
