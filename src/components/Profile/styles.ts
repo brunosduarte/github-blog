@@ -5,9 +5,16 @@ export const ProfileContainer = styled.div`
   //margin-left: 100px;
   padding: 20px;
   //width: calc(100vw - 20%);
-  
+
+  //display: flex;
+  //flex-direction: row;
+  //flex: auto;
+  //flex-wrap: wrap;
+
   display: grid;
-  grid: 150px / auto auto auto;
+  grid-template-areas: "picture info";
+
+  gap: 20px;
 
   border-color: ${props => props.theme['base-border']};
 
@@ -18,16 +25,17 @@ export const ProfileContainer = styled.div`
 `;
 
 export const ProfilePicture = styled.div`
-  //padding: 20px;
   width: 144px;
   background-image: url("./src/assets/avatar.png");
+  background-size:120%;
   background-repeat: no-repeat;
+  background-position: center;
   border-radius: 9px;
-  //background-color: ${props => props.theme['red-300']};
+  flex-basis: 150px;
+  background-color: ${props => props.theme['red-300']};
 `;
 
 export const ProfileInfo = styled.div`
-  margin-left: 20px;
   justify-content: center;
   align-content: center;
 `;

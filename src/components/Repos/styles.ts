@@ -5,7 +5,6 @@ export const ReposContainer = styled.div`
   //padding: 20px;
   display: grid;
   grid-area: myCards;
-  flex-wrap: wrap;
   grid-template-areas: "myCards .";
   gap: 10px;
   //background-color: ${props => props.theme['red-500']};
@@ -45,6 +44,7 @@ export const CardTitle = styled.h1`
 `;
 
 export const CardElapsed = styled.div`
+padding-left: 4px;
   font-size: 12px;
   flex-grow: 1;
   color: ${props => props.theme['base-span']};
