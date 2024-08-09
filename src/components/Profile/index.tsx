@@ -12,7 +12,7 @@ export function Profile() {
 
       <ProfileInfo>
         <FullName>
-          Cameron Wyatt
+          Bruno Duarte
           <LinkToGithub>
             GITHUB
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />

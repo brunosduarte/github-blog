@@ -25,7 +25,8 @@ export const ProfileContainer = styled.div`
 `;
 
 export const ProfilePicture = styled.div`
-  width: 144px;
+  width: 148px;
+  padding: 20px;
   background-image: url("./src/assets/avatar.png");
   background-size:120%;
   background-repeat: no-repeat;
