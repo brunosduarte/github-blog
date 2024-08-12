@@ -1,56 +1,49 @@
+import { useCallback, useEffect, useState } from "react";
 import { CardContainer, CardContent, CardElapsed, CardTitle, CardTitleAndElapsed, ReposContainer } from "./styles";
+import { api } from "../../lib/axios";
+
+interface Repository {
+  id: number
+  title: string
+  publisher: string
+  content: string
+  createdAt: string
+  comments: string
+}
 
 export function Repos() {
+  const [repositories, setRepositories] = useState<Repository[]>([])
+
+  const fetchRepositories = useCallback(async () => {
+    const response = await api.get('repositories', {
+      params: {
+        _sort: 'createdAt',
+        _order: 'desc',
+      },
+    })
+    console.log(response.data)
+    setRepositories(response.data)
+  }, [])
+
+  useEffect(() => {
+    fetchRepositories()
+  }, [fetchRepositories])
+  
   return (
     <ReposContainer>
 
-      <CardContainer>
-        <CardTitleAndElapsed>
-          <CardTitle>JavaScript data types and data structures</CardTitle>
-          <CardElapsed>há 1 dia</CardElapsed>
-        </CardTitleAndElapsed>
-        <CardContent>Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures avaiable in...</CardContent>
-      </CardContainer>
+      {repositories.map((repository) => {
+        return (
+          <CardContainer key={repository.id}>
+          <CardTitleAndElapsed>
+            <CardTitle>{repository.title}</CardTitle>
+            <CardElapsed>{repository.createdAt}</CardElapsed>
+          </CardTitleAndElapsed>
+          <CardContent>{repository.content}</CardContent>
+        </CardContainer>
+        )
+      })}
 
-      <CardContainer>
-        <CardTitleAndElapsed>
-          <CardTitle>JavaScript data types and data structures</CardTitle>
-          <CardElapsed>há 1 dia</CardElapsed>
-        </CardTitleAndElapsed>
-        <CardContent>Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures avaiable in...</CardContent>
-      </CardContainer>
-
-      <CardContainer>
-        <CardTitleAndElapsed>
-          <CardTitle>JavaScript data types and data structures</CardTitle>
-          <CardElapsed>há 1 dia</CardElapsed>
-        </CardTitleAndElapsed>
-        <CardContent>Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures avaiable in...</CardContent>
-      </CardContainer>
-
-      <CardContainer>
-        <CardTitleAndElapsed>
-          <CardTitle>JavaScript data types and data structures</CardTitle>
-          <CardElapsed>há 1 dia</CardElapsed>
-        </CardTitleAndElapsed>
-        <CardContent>Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures avaiable in...</CardContent>
-      </CardContainer>
-
-      <CardContainer>
-        <CardTitleAndElapsed>
-          <CardTitle>JavaScript data types and data structures</CardTitle>
-          <CardElapsed>há 1 dia</CardElapsed>
-        </CardTitleAndElapsed>
-        <CardContent>Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures avaiable in...</CardContent>
-      </CardContainer>
-
-      <CardContainer>
-        <CardTitleAndElapsed>
-          <CardTitle>JavaScript data types and data structures</CardTitle>
-          <CardElapsed>há 1 dia</CardElapsed>
-        </CardTitleAndElapsed>
-        <CardContent>Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures avaiable in...</CardContent>
-      </CardContainer>
     </ReposContainer>
   )
 }
