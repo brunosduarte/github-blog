@@ -1,58 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   width="48"
-   height="48"
-   viewBox="0 0 48 48"
-   fill="none"
-   version="1.1"
-   id="svg13"
-   sodipodi:docname="logo (copy).svg"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview15"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     showgrid="false"
-     width="98px"
-     inkscape:zoom="8.5612245"
-     inkscape:cx="32.705602"
-     inkscape:cy="30.369487"
-     inkscape:window-width="1878"
-     inkscape:window-height="1011"
-     inkscape:window-x="42"
-     inkscape:window-y="32"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg13" />
-  <g
-     clip-path="url(#clip0_406_119)"
-     id="g4"
-     transform="translate(-49.87209,3.2722783)">
-    <path
-       d="m 70.2352,18.7646 10e-5,10e-5 c 0.6837,0.6836 0.6837,1.7869 0,2.4706 v 0 l -14.9977,15 c -0.6836,0.6836 -1.7915,0.6836 -2.475,0 -0.6835,-0.6836 -0.6835,-1.787 0,-2.4707 v 0 L 65.9914,20.5302 66.5214,19.9999 65.9913,19.4697 52.7626,6.23771 c 0,-10e-6 0,-2e-5 0,-2e-5 -0.6834,-0.68361 -0.6835,-1.79147 -3e-4,-2.47517 10e-5,-3e-5 10e-5,-7e-5 10e-5,-10e-5 1e-4,-5e-5 1e-4,-1e-4 2e-4,-1.6e-4 0.6835,-0.68281 1.7915,-0.68281 2.4752,2.2e-4 0,3e-5 0,5e-5 1e-4,8e-5 z M 94,33.25 c 0.9686,0 1.75,0.7814 1.75,1.75 0,0.9686 -0.7814,1.75 -1.75,1.75 H 71.5 c -0.9686,0 -1.75,-0.7814 -1.75,-1.75 0,-0.9686 0.7814,-1.75 1.75,-1.75 z"
-       stroke="#3294f8"
-       stroke-width="1.5"
-       id="path2" />
-  </g>
-  <defs
-     id="defs11">
-    <clipPath
-       id="clip0_406_119">
-      <rect
-         width="45"
-         height="40"
-         fill="#ffffff"
-         transform="translate(51.5)"
-         id="rect8"
-         x="0"
-         y="0" />
-    </clipPath>
-  </defs>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_406_119)" id="g4" transform="translate(-49.87209,3.2722783)">
+<path d="m 70.2352,18.7646 10e-5,10e-5 c 0.6837,0.6836 
+0.6837,1.7869 0,2.4706 v 0 l -14.9977,15 c -0.6836,0.6836 
+-1.7915,0.6836 -2.475,0 -0.6835,-0.6836 -0.6835,-1.787 0,-2.4707 
+v 0 L 65.9914,20.5302 66.5214,19.9999 65.9913,19.4697 
+52.7626,6.23771 c 0,-10e-6 0,-2e-5 0,-2e-5 -0.6834,-0.68361 
+-0.6835,-1.79147 -3e-4,-2.47517 10e-5,-3e-5 10e-5,-7e-5 
+10e-5,-10e-5 1e-4,-5e-5 1e-4,-1e-4 2e-4,-1.6e-4 0.6835,-0.68281 
+1.7915,-0.68281 2.4752,2.2e-4 0,3e-5 0,5e-5 1e-4,8e-5 z M 
+94,33.25 c 0.9686,0 1.75,0.7814 1.75,1.75 0,0.9686 -0.7814,1.75 
+-1.75,1.75 H 71.5 c -0.9686,0 -1.75,-0.7814 -1.75,-1.75 0,-0.9686 
+0.7814,-1.75 1.75,-1.75 z"
+stroke="#3294f8" stroke-width="1.5" />
+</g>
+<defs>
+<clipPath id="clip0_406_119">
+<rect width="45" height="40" fill="#ffffff" transform="translate(51.5)" />
+</clipPath>
+</defs>
 </svg>
