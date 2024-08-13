@@ -47,7 +47,3 @@ export function Profile() {
     </> 
   )
 }
-
-// <FontAwesomeIcon icon={faComment} />
-// <FontAwesomeIcon icon={faChevronLeft} />
-// <FontAwesomeIcon icon={faCalendarDay} />

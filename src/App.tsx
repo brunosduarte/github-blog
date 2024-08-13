@@ -11,9 +11,12 @@ export function App() {
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
       <FetchProvider>
-        <Profile />
-        <Search />
-        <Repositories />
+
+          <Profile />
+          <Search />
+          <Repositories />
+
+
       </FetchProvider>
     </ThemeProvider>
 
