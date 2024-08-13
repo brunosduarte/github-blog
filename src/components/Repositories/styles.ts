@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ReposContainer = styled.div`
+export const RepositoriesContainer = styled.div`
   margin-top: 20px;
   //padding: 20px;
   display: grid;

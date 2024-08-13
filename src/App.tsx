@@ -3,15 +3,18 @@ import { GlobalStyle } from "./styles/global";
 import { defaultTheme } from "./styles/themes/default";
 import { Profile } from "./components/Profile";
 import { Search } from "./components/Search";
-import { Repos } from "./components/Repos";
+import { Repositories } from "./components/Repositories";
+import { FetchProvider } from "./contexts/FetchContext";
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
+      <FetchProvider>
         <Profile />
         <Search />
-        <Repos />
+        <Repositories />
+      </FetchProvider>
     </ThemeProvider>
 
   )

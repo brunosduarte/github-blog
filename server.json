@@ -48,22 +48,6 @@
       "content": "Generators help fetch and process data from APIs more granular, improving code modularity and user-friendliness. This tutorial teaches you how to use TypeScript generators for cleaner programming using a...",
       "createdAt": "2024-07-31T13:38:57.560Z",
       "comments": 20
-    },
-    {
-      "id": 6,
-      "title": "Inline ref functions in React",
-      "publisher": "brunosduarte",
-      "content": "Inline ref functions are defined directly within the JSX of a component. When you use an inline function for a ref, React calls this function twice during renders: first with null to clear the previous ref...",
-      "createdAt": "2024-08-01T13:38:57.560Z",
-      "comments": 30
-    },
-    {
-      "id": 7,
-      "title": "React useRef hook: Not Just for HTML Elements",
-      "publisher": "brunosduarte",
-      "content": "The useRef hook creates a reference object that holds a mutable value, stored in its current property. This value can be anything from a DOM element to a plain object. Unlike component state via say the useState...",
-      "createdAt": "2024-08-02T13:38:57.560Z",
-      "comments": 15
     }
   ]
 }
