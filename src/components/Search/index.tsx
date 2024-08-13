@@ -1,5 +1,5 @@
 import { useContextSelector } from "use-context-selector";
-import { InputSearch, SearchContainer, TitleSearch } from "./styles";
+import { InputSearch, NumberOfPublications, Publications, SearchContainer, TitleSearch } from "./styles";
 import { FetchContext } from "../../contexts/FetchContext";
 
 export function Search() {
@@ -12,8 +12,8 @@ export function Search() {
   return (
     <SearchContainer>
       <TitleSearch>
-        <p>Publicações</p>
-        <p color="base-span">{publications} publicações</p>
+        <Publications>Publicações</Publications>
+        <NumberOfPublications>{publications} publicações</NumberOfPublications>
       </TitleSearch>
       <InputSearch placeholder="Search content"/>
     </SearchContainer>

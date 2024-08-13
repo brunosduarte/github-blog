@@ -2,19 +2,6 @@ import { useContextSelector } from "use-context-selector";
 import { CardContainer, CardContent, CardElapsed, CardTitle, CardTitleAndElapsed, RepositoriesContainer } from "./styles";
 import { FetchContext } from "../../contexts/FetchContext";
 
-interface Repository {
-  id: number
-  title: string
-  publisher: string
-  content: string
-  createdAt: string
-  comments: string
-}
-
-interface Repositories {
-  repositories: Repository[]
-}
-
 export function Repositories() {
   const repositories = useContextSelector(FetchContext, (context) => {
     return context.repositories
@@ -22,14 +9,14 @@ export function Repositories() {
   
   return (
     <RepositoriesContainer>
-      {repositories.map((repository:Repository) => {
+      {repositories.map((repository) => {
         return (
           <CardContainer key={repository.id}>
           <CardTitleAndElapsed>
             <CardTitle>{repository.title}</CardTitle>
-            <CardElapsed>{repository.createdAt}</CardElapsed>
+            <CardElapsed>{repository.created_at}</CardElapsed>
           </CardTitleAndElapsed>
-          <CardContent>{repository.content}</CardContent>
+          <CardContent>{repository.body}</CardContent>
         </CardContainer>
         )
       })}

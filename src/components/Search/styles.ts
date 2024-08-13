@@ -1,17 +1,15 @@
 import styled from "styled-components";
 
 export const SearchContainer = styled.div`
-  margin-top: 20px;
-  //margin-left: 100px;
-  padding: 20px;
-  
+  margin-top: 3rem;
+  margin-left: 10vw;
+  margin-right: 10vw;
+
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  border-color: ${props => props.theme['base-border']};
-  background-color: ${props => props.theme['base-post']};
-
-
-  border-radius: 10px;
+  //border-color: ${props => props.theme['base-border']};
+  //background-color: ${props => props.theme['base-post']};
 `;
 
 export const TitleSearch = styled.div`
@@ -22,17 +20,30 @@ export const TitleSearch = styled.div`
   //background-color: ${props => props.theme['red-300']};
 `;
 
+export const Publications = styled.h1`
+  font-size: 18px;
+  font-weight: bold;
+`;
+
+export const NumberOfPublications = styled.h2`
+  font-size: 14px;
+  font-weight: bold;
+  color: ${props => props.theme['base-span']};
+`;
+
 export const InputSearch = styled.input`
-  padding: 8px;
-  margin-top: 10px;
-  border-radius: 4px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
   display: flex;
   justify-content: center;
   align-content: center;
-  border: 1px;
+  border: 0.25rem;
   border: solid;
+  color: ${props => props.theme['base-label']};
   border-color: ${props => props.theme['base-border']};
   background-color: ${props => props.theme['base-input']};
+
 
   &:hover {
     border-color: ${props => props.theme['base-label']};

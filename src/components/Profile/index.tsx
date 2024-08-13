@@ -13,30 +13,33 @@ export function Profile() {
   return (
     <>
       <ProfileContainer>
-        <ProfileAvatar src={`${profile?.avatar_url}`} alt="" />
+        <ProfileAvatar src={profile?.avatar_url} alt="" />
         <ProfileInfo>
           <FullName>
-            {`${profile?.name}`}
+            {profile?.name}
+            <LinkToGithub href={`https://github.com/${profile?.login}`} >
+              GITHUB
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            </LinkToGithub>
           </FullName>
-          <LinkToGithub href={`https://github.com/${profile?.login}`} >
-            GITHUB
-            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-          </LinkToGithub>
+
           <BioDescription>
-            {`${profile?.bio}`}
+            {profile?.bio}
           </BioDescription>
+          
           <InfoArea>
             <GithubProfile>
               <FontAwesomeIcon icon={faGithub} />
-              {`${profile?.login}`}
+              {profile?.login}
             </GithubProfile>
             <WorksOn>
               <FontAwesomeIcon icon={faBuilding} />
-              {`${profile?.company}`}
+              {profile?.company}
             </WorksOn>
+
             <Followers>
               <FontAwesomeIcon icon={faUserGroup} />
-              {`${profile?.followers}`}
+              {profile?.followers} seguidores
             </Followers>
           </InfoArea>
         </ProfileInfo>

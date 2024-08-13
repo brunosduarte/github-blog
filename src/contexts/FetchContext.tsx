@@ -15,10 +15,10 @@ interface Profile {
 interface Repository {
   id: number
   title: string
-  publisher: string
-  content: string
-  createdAt: string
-  comments: string
+  login: string
+  body: string
+  created_at: string
+  comments: number
 }
 
 interface FetchContextType {
@@ -33,22 +33,25 @@ interface FetchProviderProps {
   children: ReactNode
 }
 
+const username = 'brunosduarte'
+const repository = 'github-blog'
+
 export function FetchProvider({ children }: FetchProviderProps) {
   const [repositories, setRepositories] = useState<Repository[]>([])
   const [profile, setProfile] = useState<Profile>()
 
   const fetchRepositories = useCallback(async (query?: string) => {
-    const profile = await api.get('/users/brunosduarte', {})
+    const profile = await api.get(`/users/${username}`, {})
     setProfile(profile.data)
 
-    const response = await api.get('repos/brunosduarte/github-blog/issues', {
+    const repos = await api.get(`repos/${username}/${repository}/issues`, {
       params: {
         _sort: 'createdAt',
         _order: 'desc',
         q: query,
       },
     })
-    setRepositories(response.data)
+    setRepositories(repos.data)
   }, [])
 
   useEffect(() => {

@@ -1,39 +1,28 @@
 import styled from "styled-components";
 
 export const ProfileContainer = styled.div`
-  //margin-top: 200px;
-  //margin-left: 100px;
-  padding: 20px;
-  //width: calc(100vw - 20%);
+  margin-top: 3rem;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding: 1.5rem;
 
-  //display: flex;
-  //flex-direction: row;
-  //flex: auto;
-  //flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around ;
 
-  display: grid;
-  grid-template-areas: "picture info";
-
-  gap: 20px;
+  gap: 1rem;
 
   border-color: ${props => props.theme['base-border']};
-
   background-color: ${props => props.theme['base-post']};
-
-
-  border-radius: 10px;
+  border-radius: 0.75rem;
 `;
 
-
 export const ProfileAvatar = styled.img`
-  margin: 0;
-  border: 0;
-  inset: 0;
-  padding: 0;
   width: 10rem;
   height: 10rem;
-  border-radius: 9px;
-
+  border-radius: 0.75rem;
 `;
 
 export const ProfileInfo = styled.div`
@@ -42,7 +31,6 @@ export const ProfileInfo = styled.div`
 `;
 
 export const FullName = styled.h1`
-  //background-color: ${props => props.theme['blue']};
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -52,34 +40,33 @@ export const FullName = styled.h1`
 export const LinkToGithub = styled.a`
   font-size: 12px;
   justify-content: center;
+  align-content: center;
   color: ${props => props.theme['blue']};
+  border: 0.1rem; 
   background-color: transparent;
   border-style: solid;
   border-color: transparent;
   
   &:hover {
-    border: 0 2px 0 4px;
-    border-color: blue;
+    border-color: ${props => props.theme['blue']};;
+    line-height: 0;
     transition: background-color 0.2s;
     cursor: pointer;
   }
 `;
 
 export const BioDescription = styled.h2`
-  //background-color: ${props => props.theme['red-300']};
-  margin-top: 5px;
+  margin-top: 0.75rem;
   font-size: 14px;
   color: ${props => props.theme['base-text']};
-
 `;
 
 export const InfoArea = styled.div`
-  //background-color: ${props => props.theme['red-500']};
-  margin-top: 20px;
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: wrap;
   justify-content: left;
-  gap: 30px;
+  gap: 2rem;
   color: ${props => props.theme['base-subtitle']};
   `;
 
@@ -87,21 +74,19 @@ export const GithubProfile = styled.div`
   display: flex;
   align-content: center;
   justify-content: center;
-  gap: 5px;
+  gap: 0.4rem;
 `;
 
 export const WorksOn = styled.div`
-  //background-color: ${props => props.theme['red-300']};
   display: flex;
   align-content: center;
   justify-content: center;
-  gap: 5px;
+  gap: 0.4rem;
 `;
 
 export const Followers = styled.div`
   display: flex;
   align-content: center;
   justify-content: center;
-  gap: 5px;
+  gap: 0.4rem;
 `;
-
