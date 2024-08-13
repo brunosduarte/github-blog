@@ -1,6 +1,6 @@
 import { useContextSelector } from "use-context-selector";
 import { CardContainer, CardContent, CardElapsed, CardTitle, CardTitleAndElapsed, RepositoriesContainer } from "./styles";
-import { RepositoriesContext } from "../../contexts/FetchContext";
+import { FetchContext } from "../../contexts/FetchContext";
 
 interface Repository {
   id: number
@@ -16,7 +16,7 @@ interface Repositories {
 }
 
 export function Repositories() {
-  const repositories = useContextSelector(RepositoriesContext, (context) => {
+  const repositories = useContextSelector(FetchContext, (context) => {
     return context.repositories
   })
   

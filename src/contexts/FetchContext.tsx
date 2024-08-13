@@ -20,13 +20,13 @@ interface Repository {
   comments: string
 }
 
-interface RepositoryContextType {
+interface FetchContextType {
   repositories: Repository[]
   profile: Profile | undefined
   fetchRepositories: (query?: string) => Promise<void>
 }
 
-export const RepositoriesContext = createContext({} as RepositoryContextType)
+export const FetchContext = createContext({} as FetchContextType)
 
 interface FetchProviderProps {
   children: ReactNode
@@ -37,10 +37,10 @@ export function FetchProvider({ children }: FetchProviderProps) {
   const [profile, setProfile] = useState<Profile>()
 
   const fetchRepositories = useCallback(async (query?: string) => {
-    const profile = await api.get('user', {})
+    const profile = await api.get('/users/brunosduarte', {})
     setProfile(profile.data)
 
-    const response = await api.get('repositories', {
+    const response = await api.get('repos/brunosduarte/github-blog/issues', {
       params: {
         _sort: 'createdAt',
         _order: 'desc',
@@ -55,7 +55,7 @@ export function FetchProvider({ children }: FetchProviderProps) {
   }, [fetchRepositories])
 
   return (
-    <RepositoriesContext.Provider
+    <FetchContext.Provider
       value={{
         profile,
         repositories,
@@ -63,6 +63,6 @@ export function FetchProvider({ children }: FetchProviderProps) {
       }}
     >
       {children}
-    </RepositoriesContext.Provider>
+    </FetchContext.Provider>
   )
 }

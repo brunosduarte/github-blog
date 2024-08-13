@@ -3,7 +3,7 @@ import { faArrowUpRightFromSquare, faBuilding, faUserGroup } from '@fortawesome/
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Followers, GithubProfile, FullName, InfoArea, LinkToGithub, ProfileContainer, ProfilePicture, WorksOn, BioDescription, ProfileInfo } from "./styles";
 import { useContextSelector } from 'use-context-selector';
-import { RepositoriesContext } from '../../contexts/FetchContext';
+import { FetchContext } from '../../contexts/FetchContext';
 
 interface Profile {
   name: string,
@@ -13,7 +13,7 @@ interface Profile {
   followers: number
 }
 export function Profile() {  
-  const profile = useContextSelector(RepositoriesContext, (context) => {
+  const profile = useContextSelector(FetchContext, (context) => {
     return context.profile
   })
 

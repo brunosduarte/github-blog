@@ -1,9 +1,9 @@
 import { useContextSelector } from "use-context-selector";
 import { InputSearch, SearchContainer, TitleSearch } from "./styles";
-import { RepositoriesContext } from "../../contexts/FetchContext";
+import { FetchContext } from "../../contexts/FetchContext";
 
 export function Search() {
-  const repositories = useContextSelector(RepositoriesContext, (context) => {
+  const repositories = useContextSelector(FetchContext, (context) => {
     return context.repositories
   })
 
