@@ -22,7 +22,7 @@ export const CardContainer = styled.div`
   flex-direction: column;
   flex-basis: 1;
   border-radius: 0.75rem;
-  border: 0.5rem;
+  border: 0.15rem;
   border-style: solid;
   background-color: ${props => props.theme['base-post']};
   border-color: ${props => props.theme['base-post']};
@@ -31,7 +31,7 @@ export const CardContainer = styled.div`
   &:hover {
     transition: background-color 0.2s;
     cursor: pointer;
-    border-color: ${props => props.theme['base-text']};
+    border-color: ${props => props.theme['base-label']};
   }
 `;
 

@@ -18,7 +18,7 @@ export function Profile() {
           <FullName>
             {profile?.name}
             <LinkToGithub href={`https://github.com/${profile?.login}`} >
-              GITHUB
+              GITHUB &nbsp;
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </LinkToGithub>
           </FullName>

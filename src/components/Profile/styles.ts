@@ -10,7 +10,7 @@ export const ProfileContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around ;
+  justify-content: space-evenly;
 
   gap: 1rem;
 
@@ -46,6 +46,8 @@ export const LinkToGithub = styled.a`
   background-color: transparent;
   border-style: solid;
   border-color: transparent;
+  text-decoration: none;
+  gap: 0.5rem;
   
   &:hover {
     border-color: ${props => props.theme['blue']};;

@@ -40,13 +40,13 @@ export const InputSearch = styled.input`
   align-content: center;
   border: 0.25rem;
   border: solid;
-  color: ${props => props.theme['base-label']};
+  color: ${props => props.theme['base-text']};
   border-color: ${props => props.theme['base-border']};
   background-color: ${props => props.theme['base-input']};
 
 
   &:hover {
-    border-color: ${props => props.theme['base-label']};
+    border-color: ${props => props.theme['blue']};
     transition: border-color 0.2s;
     
   }
