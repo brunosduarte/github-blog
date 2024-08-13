@@ -5,10 +5,11 @@ import { Profile } from '../components/Profile'
 
 interface Profile {
   name: string,
-  username: string,
-  description: string,
-  worksOn: string,
+  login: string,
+  bio: string,
+  company: string,
   followers: number
+  avatar_url: string
 }
 
 interface Repository {

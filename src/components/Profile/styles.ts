@@ -24,16 +24,16 @@ export const ProfileContainer = styled.div`
   border-radius: 10px;
 `;
 
-export const ProfilePicture = styled.div`
-  width: 148px;
-  padding: 20px;
-  background-image: url("./src/assets/avatar.png");
-  background-size:120%;
-  background-repeat: no-repeat;
-  background-position: center;
+
+export const ProfileAvatar = styled.img`
+  margin: 0;
+  border: 0;
+  inset: 0;
+  padding: 0;
+  width: 10rem;
+  height: 10rem;
   border-radius: 9px;
-  flex-basis: 150px;
-  background-color: ${props => props.theme['red-300']};
+
 `;
 
 export const ProfileInfo = styled.div`
@@ -49,7 +49,7 @@ export const FullName = styled.h1`
   color: ${props => props.theme['base-title']};
 `;
 
-export const LinkToGithub = styled.button`
+export const LinkToGithub = styled.a`
   font-size: 12px;
   justify-content: center;
   color: ${props => props.theme['blue']};
