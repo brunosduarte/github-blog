@@ -36,6 +36,8 @@ export const PostHeader = styled.div`
 
 export const PostTitle = styled.h1`
   color: ${props => props.theme['base-title']};
+  font-size: 24px;
+  font-weight: bold;
   min-width: 100%;
   justify-content: flex-start;
 `;
@@ -83,6 +85,7 @@ export const LinkToGithub = styled.a`
 export const InfoArea = styled.div`
   margin-top: 1.5rem;
   display: flex;
+  font-size: 16px;
   flex-direction: wrap;
   justify-content: flex-start;
   min-width: 100%;
@@ -115,8 +118,9 @@ export const PostBody = styled.h1`
   margin-top: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
+  font-size: 14px;
+  font-weight: normal;
+  align-content: flex-start;
+  justify-content: flex-start;
   color: ${props => props.theme['base-title']};
 `;

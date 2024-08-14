@@ -28,21 +28,22 @@ export function Post() {
         </PostHeader>
 
           <PostTitle>
-            {`post.id.title`}
+            {`{issues[1].title}`}
           </PostTitle>
 
           <InfoArea>
             <GithubProfile>
               <FontAwesomeIcon icon={faGithub} />
-              {`post?.user.login`}
+              {`{issues[1].user.login}`}
             </GithubProfile>
             <ElapsedTime>
               <FontAwesomeIcon icon={faCalendarDay} />
-              {`post?.created_at`}
+              {/* {issues[0].created_at} */}
+              {`Há 3 dias`}
             </ElapsedTime>
             <Comments>
               <FontAwesomeIcon icon={faComment} />
-              {`post?.comments`} comentários
+              {`{issues[1].comments}`} comentários
             </Comments>
           </InfoArea>
         
@@ -50,7 +51,7 @@ export function Post() {
 
       <PostBody>
         <Markdown>
-          {`issues{0}.body`}
+          {`{issues[1].body}`}
         </Markdown>
       </PostBody>
     </PostPage> 
