@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
-export const PostContainer = styled.div`
+export const PostPage = styled.div`
   margin-top: 3rem;
   margin-left: 10vw;
   margin-right: 10vw;
-  padding: 1.5rem;
+  `;
 
+export const PostContainer = styled.div`
+  padding: 1.5rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
@@ -20,14 +22,15 @@ export const PostContainer = styled.div`
 `;
 
 export const PostHeader = styled.div`
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  size: 100%;
+  justify-content: space-evenly;
   align-content: center;
+  background-color: ${props => props.theme['red-300']};
 `;
 
 export const PostTitle = styled.h1`
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
   color: ${props => props.theme['base-title']};
 `;
 
@@ -71,14 +74,6 @@ export const LinkToGithub = styled.a`
   }
 `;
 
-export const PostBody = styled.h1`
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  color: ${props => props.theme['base-title']};
-`;
-
-
 export const InfoArea = styled.div`
   margin-top: 1.5rem;
   display: flex;
@@ -107,4 +102,14 @@ export const Comments = styled.div`
   align-content: center;
   justify-content: center;
   gap: 0.4rem;
+`;
+
+export const PostBody = styled.h1`
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  color: ${props => props.theme['base-title']};
 `;

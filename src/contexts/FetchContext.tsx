@@ -12,7 +12,7 @@ interface Profile {
   avatar_url: string
 }
 
-interface Repository {
+interface Issue {
   id: number
   title: string
   login: string
@@ -22,9 +22,9 @@ interface Repository {
 }
 
 interface FetchContextType {
-  repositories: Repository[]
+  issues: Issue[]
   profile: Profile | undefined
-  fetchRepositories: (query?: string) => Promise<void>
+  fetchIssues: (query?: string) => Promise<void>
 }
 
 export const FetchContext = createContext({} as FetchContextType)
@@ -34,36 +34,36 @@ interface FetchProviderProps {
 }
 
 const username = 'brunosduarte'
-const repository = 'github-blog'
+const issue = 'github-blog'
 
 export function FetchProvider({ children }: FetchProviderProps) {
-  const [repositories, setRepositories] = useState<Repository[]>([])
+  const [issues, setIssues] = useState<Issue[]>([])
   const [profile, setProfile] = useState<Profile>()
 
-  const fetchRepositories = useCallback(async (query?: string) => {
+  const fetchIssues = useCallback(async (query?: string) => {
     const profile = await api.get(`/users/${username}`, {})
     setProfile(profile.data)
 
-    const repos = await api.get(`repos/${username}/${repository}/issues`, {
+    const repos = await api.get(`repos/${username}/${issue}/issues`, {
       params: {
         _sort: 'createdAt',
         _order: 'desc',
         q: query,
       },
     })
-    setRepositories(repos.data)
+    setIssues(repos.data)
   }, [])
 
   useEffect(() => {
-    fetchRepositories()
-  }, [fetchRepositories])
+    fetchIssues()
+  }, [fetchIssues])
 
   return (
     <FetchContext.Provider
       value={{
         profile,
-        repositories,
-        fetchRepositories,
+        issues,
+        fetchIssues,
       }}
     >
       {children}

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const RepositoriesContainer = styled.div`
+export const IssuesContainer = styled.div`
   margin-top: 3rem;
   margin-left: 10vw;
   margin-right: 10vw;

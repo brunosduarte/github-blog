@@ -3,11 +3,11 @@ import { InputSearch, NumberOfPublications, Publications, SearchContainer, Title
 import { FetchContext } from "../../contexts/FetchContext";
 
 export function Search() {
-  const repositories = useContextSelector(FetchContext, (context) => {
-    return context.repositories
+  const issues = useContextSelector(FetchContext, (context) => {
+    return context.issues
   })
 
-  const publications = repositories.length
+  const publications = issues.length
   
   return (
     <SearchContainer>
