@@ -42,7 +42,7 @@ export function Post() {
             </ElapsedTime>
             <Comments>
               <FontAwesomeIcon icon={faComment} />
-              {`post?.comments`} seguidores
+              {`post?.comments`} comentários
             </Comments>
           </InfoArea>
         
@@ -50,7 +50,7 @@ export function Post() {
 
       <PostBody>
         <Markdown>
-          {`issues{0}.id`}
+          {`issues{0}.body`}
         </Markdown>
       </PostBody>
     </PostPage> 

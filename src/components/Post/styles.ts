@@ -4,10 +4,14 @@ export const PostPage = styled.div`
   margin-top: 3rem;
   margin-left: 10vw;
   margin-right: 10vw;
+
+  align-items: center;
+  justify-content: center;
+  //background-color: ${props => props.theme['red-300']};
   `;
 
 export const PostContainer = styled.div`
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -24,14 +28,16 @@ export const PostContainer = styled.div`
 export const PostHeader = styled.div`
   display: flex;
   flex-direction: row;
-  size: 100%;
-  justify-content: space-evenly;
+  min-width: 100%;
+  justify-content: space-between;
   align-content: center;
-  background-color: ${props => props.theme['red-300']};
+  //background-color: ${props => props.theme['red-300']};
 `;
 
 export const PostTitle = styled.h1`
   color: ${props => props.theme['base-title']};
+  min-width: 100%;
+  justify-content: flex-start;
 `;
 
 export const BackButton = styled.a`
@@ -78,7 +84,8 @@ export const InfoArea = styled.div`
   margin-top: 1.5rem;
   display: flex;
   flex-direction: wrap;
-  justify-content: left;
+  justify-content: flex-start;
+  min-width: 100%;
   gap: 2rem;
   color: ${props => props.theme['base-subtitle']};
   `;

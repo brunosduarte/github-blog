@@ -56,9 +56,10 @@ export const CardElapsed = styled.div`
 
 export const CardContent = styled.h2`
   padding: 0.75rem;
+  padding-bottom: 50px;
   font-size: 16px;
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
+  //display: flex;
+  //align-content: center;
+  //justify-content: space-between;
   color: ${props => props.theme['base-text']};
 `;
