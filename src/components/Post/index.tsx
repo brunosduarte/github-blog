@@ -12,7 +12,7 @@ export function Post() {
     return context.issues
   })
 
-  console.log(issues)
+  console.log('issues',issues)
 
   return (
     <PostPage>
@@ -42,7 +42,7 @@ export function Post() {
               {` {formatDistanceToNow(issues[1].created_at, { addSufix: true })} `}            </ElapsedTime>
             <Comments>
               <FontAwesomeIcon icon={faComment} />
-              {`{issues[1].comments}`} comments
+              {`{issues[4].comments}`} comments
             </Comments>
           </InfoArea>
         

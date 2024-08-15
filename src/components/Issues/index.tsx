@@ -16,7 +16,6 @@ export function Issues() {
           <CardTitleAndElapsed>
             <CardTitle>{issue.title}</CardTitle>
             <CardElapsed>{formatDistanceToNow(issue.created_at, {
-              //locale: pt-BR,
               addSuffix: true,
             })}</CardElapsed>
           </CardTitleAndElapsed>
