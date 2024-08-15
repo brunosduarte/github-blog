@@ -8,7 +8,7 @@ export const IssuesContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  //background-color: ${props => props.theme['red-500']};
+  //background-color: ${props => props.theme['red-700']};
 `;
 
 export const CardContainer = styled.div`
@@ -18,12 +18,15 @@ export const CardContainer = styled.div`
   text-overflow: ellipsis;
 
   padding: 0.75rem;
-  //content: none;
 
   break-inside: avoid-page;
   border-radius: 0.75rem;
   border: 0.15rem;
   border-style: solid;
+
+  justify-content: space-evenly;
+  align-items: center;
+
   background-color: ${props => props.theme['base-post']};
   border-color: ${props => props.theme['base-post']};
   transition: border-color 0.5s;
@@ -36,8 +39,11 @@ export const CardContainer = styled.div`
 `;
 
 export const CardTitleAndElapsed = styled.div`
+  align-items: center;
   display: flex;
   justify-content: space-between;
+//
+  //background-color: ${props => props.theme["blue"]};
 `;
 
 export const CardTitle = styled.h1`
@@ -50,16 +56,18 @@ export const CardTitle = styled.h1`
 export const CardElapsed = styled.div`
   padding: 0.75rem;
   font-size: 14px;
-  flex-grow: 1;
+  text-align: right;
+//
   color: ${props => props.theme['base-span']};
+  //background-color: ${props => props.theme['red-300']}
 `;
 
 export const CardContent = styled.h2`
-  padding: 0.75rem;
-  padding-bottom: 50px;
   font-size: 16px;
-  //display: flex;
-  //align-content: center;
-  //justify-content: space-between;
+  padding: 0.75rem;
+
+  //text-overflow: ellipsis;
+  //padding-bottom: 50px;
+
   color: ${props => props.theme['base-text']};
 `;

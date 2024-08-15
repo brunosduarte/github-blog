@@ -12,8 +12,8 @@ export function Search() {
   return (
     <SearchContainer>
       <TitleSearch>
-        <Publications>Publicações</Publications>
-        <NumberOfPublications>{publications} publicações</NumberOfPublications>
+        <Publications>Publications</Publications>
+        <NumberOfPublications>{publications} publications</NumberOfPublications>
       </TitleSearch>
       <InputSearch placeholder="Search content"/>
     </SearchContainer>

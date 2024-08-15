@@ -5,6 +5,7 @@ import { BackButton, Comments, ElapsedTime, GithubProfile, PostHeader, InfoArea,
 import { useContextSelector } from 'use-context-selector';
 import { FetchContext } from '../../contexts/FetchContext';
 import Markdown from 'react-markdown'
+import { formatDistanceToNow } from 'date-fns';
 
 export function Post() {  
   const issues = useContextSelector(FetchContext, (context) => {
@@ -19,10 +20,10 @@ export function Post() {
         <PostHeader>
           <BackButton>
             <FontAwesomeIcon icon={faChevronLeft} />
-            &nbsp; VOLTAR 
+            &nbsp; BACK 
           </BackButton>
           <LinkToGithub>
-            VER NO GITHUB &nbsp;
+            SEE ON GITHUB &nbsp;
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </LinkToGithub>
         </PostHeader>
@@ -38,12 +39,10 @@ export function Post() {
             </GithubProfile>
             <ElapsedTime>
               <FontAwesomeIcon icon={faCalendarDay} />
-              {/* elapsedTime.format(new Date(issues[1].created_at)) */}
-              {`Há 3 dias`}
-            </ElapsedTime>
+              {` {formatDistanceToNow(issues[1].created_at, { addSufix: true })} `}            </ElapsedTime>
             <Comments>
               <FontAwesomeIcon icon={faComment} />
-              {`{issues[1].comments}`} comentários
+              {`{issues[1].comments}`} comments
             </Comments>
           </InfoArea>
         

@@ -39,7 +39,7 @@ export function Profile() {
 
             <Followers>
               <FontAwesomeIcon icon={faUserGroup} />
-              {profile?.followers} seguidores
+              {profile?.followers} followers
             </Followers>
           </InfoArea>
         </ProfileInfo>
