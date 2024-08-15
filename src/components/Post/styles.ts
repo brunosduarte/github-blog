@@ -122,5 +122,6 @@ export const PostBody = styled.h1`
   font-weight: normal;
   align-content: flex-start;
   justify-content: flex-start;
+  white-space: pre-wrap;
   color: ${props => props.theme['base-title']};
 `;

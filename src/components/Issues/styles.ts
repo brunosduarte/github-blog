@@ -6,21 +6,23 @@ export const IssuesContainer = styled.div`
   margin-right: 10vw;
 
   display: grid;
-  grid-area: myCards;
-  grid-template-areas: "myCards .";
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
   //background-color: ${props => props.theme['red-500']};
 `;
 
 export const CardContainer = styled.div`
   max-height: 20rem;
-  text-overflow: clip;
-  overflow: clip;
+  min-width: 10rem;
+
+  overflow: hidden;
+  /* overflow-wrap: break-word; */
+  text-overflow: ellipsis;
 
   padding: 0.75rem;
-  display: flex;
-  flex-direction: column;
-  flex-basis: 1;
+  //display: flex;
+  //flex-direction: column;
+  //flex-basis: 1;
   border-radius: 0.75rem;
   border: 0.15rem;
   border-style: solid;
