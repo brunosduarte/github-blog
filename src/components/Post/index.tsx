@@ -38,7 +38,7 @@ export function Post() {
             </GithubProfile>
             <ElapsedTime>
               <FontAwesomeIcon icon={faCalendarDay} />
-              {/* {issues[0].created_at} */}
+              {/* elapsedTime.format(new Date(issues[1].created_at)) */}
               {`Há 3 dias`}
             </ElapsedTime>
             <Comments>

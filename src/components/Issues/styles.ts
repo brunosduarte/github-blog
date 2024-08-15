@@ -14,15 +14,13 @@ export const IssuesContainer = styled.div`
 export const CardContainer = styled.div`
   max-height: 20rem;
   min-width: 10rem;
-
   overflow: hidden;
-  /* overflow-wrap: break-word; */
   text-overflow: ellipsis;
 
   padding: 0.75rem;
-  //display: flex;
-  //flex-direction: column;
-  //flex-basis: 1;
+  //content: none;
+
+  break-inside: avoid-page;
   border-radius: 0.75rem;
   border: 0.15rem;
   border-style: solid;
