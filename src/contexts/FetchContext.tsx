@@ -25,6 +25,7 @@ interface FetchContextType {
   issues: Issue[]
   profile: Profile | undefined
   fetchIssues: (query?: string) => Promise<void>
+  searchInIssues: (query?: string) => Promise<void>
 }
 
 export const FetchContext = createContext({} as FetchContextType)
@@ -37,8 +38,9 @@ const user = 'brunosduarte'
 const repository = 'github-blog'
 
 export function FetchProvider({ children }: FetchProviderProps) {
-  const [issues, setIssues] = useState<Issue[]>([])
   const [profile, setProfile] = useState<Profile>()
+  const [issues, setIssues] = useState<Issue[]>([])
+  const [searchInputIssues, setSearchInputIssues] = useState<Issue[]>([])
 
   const fetchProfile = useCallback(async () => {
     const profile = await api.get(`/users/${user}`, {})
@@ -50,10 +52,19 @@ export function FetchProvider({ children }: FetchProviderProps) {
       params: {
         _sort: 'createdAt',
         _order: 'desc',
-        q: query,
+        q: query
       },
     })
     setIssues(repos.data)
+  }, [])
+
+  const searchInIssues = useCallback(async (query?: string) => {
+    const searchIssues = await api.get(`search/issues?q=${query}%20repo:${user}/${repository}`, {
+      params: {
+        q: query,
+      },
+    })
+    setSearchInputIssues(searchIssues.data)
   }, [])
 
   useEffect(() => {
@@ -61,8 +72,14 @@ export function FetchProvider({ children }: FetchProviderProps) {
   }, [])
 
   useEffect(() => {
-    fetchIssues()
-  }, [fetchIssues])
+    if (searchInputIssues) {
+      console.log('5',searchInIssues)
+      searchInIssues()
+    } else {
+      console.log('6',fetchIssues)
+      fetchIssues()
+    }
+  }, [fetch, searchInIssues])
 
 
   return (
@@ -71,6 +88,7 @@ export function FetchProvider({ children }: FetchProviderProps) {
         profile,
         issues,
         fetchIssues,
+        searchInIssues,
       }}
     >
       {children}

@@ -42,14 +42,17 @@ export const LinkToGithub = styled.a`
   justify-content: center;
   align-content: center;
   color: ${props => props.theme['blue']};
-  border: 0.1rem; 
-  background-color: transparent;
-  border-style: solid;
-  border-color: transparent;
+  //background-color: transparent;
   text-decoration: none;
   gap: 0.5rem;
+  border: 0.1rem; 
+  border-style: solid;
+  border-color: transparent;
   
   &:hover {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
     border-color: ${props => props.theme['blue']};;
     line-height: 0;
     transition: background-color 0.2s;

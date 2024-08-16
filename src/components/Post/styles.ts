@@ -55,6 +55,9 @@ export const BackButton = styled.a`
   gap: 0.5rem;
   
   &:hover {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
     border-color: ${props => props.theme['blue']};;
     line-height: 0;
     transition: background-color 0.2s;
@@ -75,6 +78,9 @@ export const LinkToGithub = styled.a`
   gap: 0.5rem;
   
   &:hover {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
     border-color: ${props => props.theme['blue']};;
     line-height: 0;
     transition: background-color 0.2s;

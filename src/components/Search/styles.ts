@@ -31,12 +31,12 @@ export const NumberOfPublications = styled.h2`
   color: ${props => props.theme['base-span']};
 `;
 
-export const InputSearch = styled.input`
-  padding: 0.5rem;
+export const InputArea = styled.div`
+  padding: 0.45rem;
   margin-top: 1rem;
   border-radius: 0.5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
   border: 0.25rem;
   border: solid;
@@ -49,5 +49,29 @@ export const InputSearch = styled.input`
     border-color: ${props => props.theme['blue']};
     transition: border-color 0.2s;
     
+  }
+
+  input {
+    flex: 1;
+    border: none;
+    color: ${props => props.theme['base-text']};
+    background-color: transparent;
+
+    &::placeholder {
+      color: ${(props) => props.theme['base-text']};
+      background-color: transparent;
+    }
+  }
+
+  button {
+    padding: 0.25rem;
+    border: none;
+    border-radius: 0.6rem;
+    background-color: ${props => props.theme['base-label']};
+    color: ${props => props.theme['white']};
+
+    &:hover {
+      background-color: ${props => props.theme['blue']};
+    }
   }
 `;

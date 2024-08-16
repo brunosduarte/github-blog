@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const IssuesContainer = styled.div`
-  margin-top: 3rem;
+  margin-top: 2.5rem;
   margin-left: 10vw;
   margin-right: 10vw;
 
@@ -39,10 +39,10 @@ export const CardContainer = styled.div`
 `;
 
 export const CardTitleAndElapsed = styled.div`
-  align-items: center;
+  align-items: baseline;
   display: flex;
+  flex: 1;
   justify-content: space-between;
-//
   //background-color: ${props => props.theme["blue"]};
 `;
 
@@ -54,10 +54,12 @@ export const CardTitle = styled.h1`
 `;
 
 export const CardElapsed = styled.div`
+  flex: 1;
   padding: 0.75rem;
   font-size: 14px;
   text-align: right;
-//
+  //align-items: self-start;
+
   color: ${props => props.theme['base-span']};
   //background-color: ${props => props.theme['red-300']}
 `;
