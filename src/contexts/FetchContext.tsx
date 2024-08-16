@@ -72,14 +72,14 @@ export function FetchProvider({ children }: FetchProviderProps) {
   }, [])
 
   useEffect(() => {
-    if (searchInputIssues) {
+    if (!searchInputIssues) {
       console.log('5',searchInIssues)
       searchInIssues()
     } else {
       console.log('6',fetchIssues)
       fetchIssues()
     }
-  }, [fetch, searchInIssues])
+  }, [fetchIssues, searchInIssues])
 
 
   return (

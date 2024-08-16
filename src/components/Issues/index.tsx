@@ -7,12 +7,21 @@ export function Issues() {
   const issues = useContextSelector(FetchContext, (context) => {
     return context.issues
   })
+
+  function handleOpenCard( issue: any ) {
+    if (issue.id === issue) {
+      const matchId = issue
+      console.log('00',matchId)
+      //return matchId
+    }
+    console.log('01',issue)
+  }
   
   return (
     <IssuesContainer>
       {issues.map((issue) => {
         return (
-          <CardContainer key={issue.id}>
+          <CardContainer key={issue.id} onClick={handleOpenCard(issue.id)} >
           <CardTitleAndElapsed>
             <CardTitle>{issue.title}</CardTitle>
             <CardElapsed>{formatDistanceToNow(issue.created_at, {
