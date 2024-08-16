@@ -1,6 +1,6 @@
 import { useContextSelector } from "use-context-selector";
 import { NumberOfPublications, Publications, SearchContainer, TitleSearch, InputArea } from "./styles";
-import { FetchContext } from "../../contexts/FetchContext";
+import { FetchContext } from "@/contexts/FetchContext";
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'

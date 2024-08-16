@@ -3,7 +3,7 @@ import { faArrowUpRightFromSquare, faBuilding, faUserGroup } from '@fortawesome/
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Followers, GithubProfile, FullName, InfoArea, LinkToGithub, ProfileContainer, WorksOn, BioDescription, ProfileInfo, ProfileAvatar } from "./styles";
 import { useContextSelector } from 'use-context-selector';
-import { FetchContext } from '../../contexts/FetchContext';
+import { FetchContext } from '@/contexts/FetchContext';
 
 export function Profile() {  
   const profile = useContextSelector(FetchContext, (context) => {

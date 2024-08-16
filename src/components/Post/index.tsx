@@ -3,7 +3,7 @@ import { faArrowUpRightFromSquare, faCalendarDay, faChevronLeft, faComment } fro
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { BackButton, Comments, ElapsedTime, GithubProfile, PostHeader, InfoArea, LinkToGithub, PostBody, PostContainer, PostTitle, PostPage } from "./styles";
 import { useContextSelector } from 'use-context-selector';
-import { FetchContext } from '../../contexts/FetchContext';
+import { FetchContext } from '@/contexts/FetchContext';
 import Markdown from 'react-markdown'
 import { formatDistanceToNow } from 'date-fns';
 

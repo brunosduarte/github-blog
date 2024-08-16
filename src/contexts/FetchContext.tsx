@@ -1,7 +1,7 @@
 import { ReactNode, useCallback, useEffect, useState } from 'react'
 import { createContext } from 'use-context-selector'
-import { api } from '../lib/axios'
-import { Profile } from '../components/Profile'
+import { api } from '@/lib/axios'
+import { Profile } from '@/components/Profile'
 
 interface Profile {
   name: string,
