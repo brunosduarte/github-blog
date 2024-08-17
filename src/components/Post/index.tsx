@@ -6,13 +6,18 @@ import { useContextSelector } from 'use-context-selector';
 import { FetchContext } from '@/contexts/FetchContext';
 import Markdown from 'react-markdown'
 import { formatDistanceToNow } from 'date-fns';
+import { ReactNode } from 'react';
 
-export function Post() {  
+interface PostProps {
+  children: ReactNode;
+}
+export function Post({ children }: PostProps) {  
   const issues = useContextSelector(FetchContext, (context) => {
     return context.issues
   })
 
   console.log('issues',issues)
+  console.log('children',children)
 
   return (
     <PostPage>
@@ -39,7 +44,8 @@ export function Post() {
             </GithubProfile>
             <ElapsedTime>
               <FontAwesomeIcon icon={faCalendarDay} />
-              {` {formatDistanceToNow(issues[1].created_at, { addSufix: true })} `}            </ElapsedTime>
+              {` {formatDistanceToNow(issues[1].created_at, { addSufix: true })} `}
+            </ElapsedTime>
             <Comments>
               <FontAwesomeIcon icon={faComment} />
               {`{issues[4].comments}`} comments

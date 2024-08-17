@@ -48,6 +48,7 @@ export const LinkToGithub = styled.a`
   border: 0.1rem; 
   border-style: solid;
   border-color: transparent;
+  //border-bottom: 10px;
   
   &:hover {
     border-top: 0;

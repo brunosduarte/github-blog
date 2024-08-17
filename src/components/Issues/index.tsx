@@ -9,12 +9,7 @@ export function Issues() {
   })
 
   function handleOpenCard( issue: any ) {
-    if (issue.id === issue) {
-      const matchId = issue
-      console.log('00',matchId)
-      //return matchId
-    }
-    console.log('01',issue)
+    //TODO comparar e react-router-dom
   }
   
   return (
@@ -23,14 +18,14 @@ export function Issues() {
         return (
           // onClick={handleOpenCard(issue.id)}
           <CardContainer key={issue.id} >
-          <CardTitleAndElapsed>
-            <CardTitle>{issue.title}</CardTitle>
-            <CardElapsed>{formatDistanceToNow(issue.created_at, {
-              addSuffix: true,
-            })}</CardElapsed>
-          </CardTitleAndElapsed>
-          <CardContent>{issue.body}</CardContent>
-        </CardContainer>
+            <CardTitleAndElapsed>
+              <CardTitle>{issue.title}</CardTitle>
+              <CardElapsed>{formatDistanceToNow(issue.created_at, {
+                addSuffix: true,
+              })}</CardElapsed>
+            </CardTitleAndElapsed>
+            <CardContent>{issue.body}</CardContent>
+          </CardContainer>
         )
       })}
     </IssuesContainer>

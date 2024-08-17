@@ -1,1 +1,0 @@
-export const elapsedTime = new Intl.DateTimeFormat('pt-BR')

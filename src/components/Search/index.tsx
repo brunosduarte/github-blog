@@ -1,5 +1,5 @@
 import { useContextSelector } from "use-context-selector";
-import { NumberOfPublications, Publications, SearchContainer, TitleSearch, InputArea } from "./styles";
+import { NumberOfPublications, TitleText, SearchContainer, TitleSearch, InputArea } from "./styles";
 import { FetchContext } from "@/contexts/FetchContext";
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
@@ -36,7 +36,7 @@ export function Search() {
   return (
     <SearchContainer onSubmit={handleSubmit(handleSearchIssues)}>
       <TitleSearch>
-        <Publications>Publications</Publications>
+        <TitleText>Publications</TitleText>
         <NumberOfPublications>{publications} publications</NumberOfPublications>
       </TitleSearch>
       
@@ -45,12 +45,8 @@ export function Search() {
           type="text"
           placeholder="Search content"
           {...register('query')}
-          
         />
-        <button 
-          type="submit"
-          disabled={isSubmitting}
-        >
+        <button type="submit" disabled={isSubmitting} >
           Search
         </button>
       </InputArea>

@@ -20,7 +20,7 @@ export const TitleSearch = styled.div`
   //background-color: ${props => props.theme['red-300']};
 `;
 
-export const Publications = styled.h1`
+export const TitleText = styled.h1`
   font-size: 18px;
   font-weight: bold;
 `;
