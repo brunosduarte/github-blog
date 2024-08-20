@@ -58,7 +58,8 @@ export const CardElapsed = styled.div`
   padding: 0.75rem;
   font-size: 14px;
   text-align: right;
-  //align-items: self-start;
+  justify-content: right;
+  
 
   color: ${props => props.theme['base-span']};
   //background-color: ${props => props.theme['red-700']}

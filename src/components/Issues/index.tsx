@@ -19,12 +19,12 @@ export function Issues() {
           // onClick={handleOpenCard(issue.id)}
           <CardContainer key={issue.id} >
             <CardTitleAndElapsed>
-              <CardTitle>{issue.title}</CardTitle>
+              <CardTitle>{ (issue.title.length <= 35) ? issue.title : issue.title.substring(0,35).concat('...') }</CardTitle>
               <CardElapsed>{formatDistanceToNow(issue.created_at, {
                 addSuffix: true,
               })}</CardElapsed>
             </CardTitleAndElapsed>
-            <CardContent>{issue.body}</CardContent>
+            <CardContent>{ (issue.body.length <= 180) ? issue.body : issue.body.substring(0,180).concat('...') }</CardContent>
           </CardContainer>
         )
       })}
